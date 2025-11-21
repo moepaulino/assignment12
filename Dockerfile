@@ -8,9 +8,16 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends gcc python3-dev libssl-dev curl && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        gcc \
+        python3-dev \
+        python3-apt \
+        libssl-dev \
+        curl \
+        wget \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and essential Python tools
 RUN python -m pip install --upgrade pip setuptools>=70.0.0 wheel
