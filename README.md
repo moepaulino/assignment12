@@ -211,7 +211,8 @@ python main.py
 ```bash
 docker run -it --rm <image-name>
 ```
-
+# DockerHub URL
+https://hub.docker.com/r/leopaulino/601_module12
 ---
 
 # 📝 7. Submission Instructions
